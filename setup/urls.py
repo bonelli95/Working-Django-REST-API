@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from school.views import StudentsViewSet, CoursesViewSet, EnrollmentsViewSet, ListEnrollmentStudent
+from school.views import StudentsViewSet, CoursesViewSet, EnrollmentsViewSet, ListEnrollmentStudent, ListStudentsEnrollment
 from rest_framework import routers
 
 router = routers.DefaultRouter()
@@ -12,4 +12,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
     path('student/<int:pk>/enrollment/', ListEnrollmentStudent.as_view()),
+    path('course/<int:pk>/enrollment/', ListStudentsEnrollment.as_view()),
 ]
