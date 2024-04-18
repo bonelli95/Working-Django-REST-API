@@ -5,6 +5,7 @@ class Student(models.Model):
     pin = models.CharField(max_length=10)
     tin = models.CharField(max_length=10)
     date_birth = models.DateField()
+    cell = models.CharField(max_length=12, default="")
 
     def __str__(self):
         return self.name
