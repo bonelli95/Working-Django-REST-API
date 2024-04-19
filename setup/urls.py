@@ -11,6 +11,6 @@ router.register('enrollment', EnrollmentsViewSet, basename='Enrollment')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
-    path('student/<int:pk>/enrollment/', ListEnrollmentStudent.as_view()),
-    path('course/<int:pk>/enrollment/', ListStudentsEnrollment.as_view()),
+    path('students/<int:pk>/enrollment/', ListEnrollmentStudent.as_view()),
+    path('courses/<int:pk>/enrollment/', ListStudentsEnrollment.as_view()),
 ]
