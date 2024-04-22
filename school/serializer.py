@@ -4,7 +4,7 @@ from school.models import Student, Course, Enrollment
 class StudentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Student
-        fields = ['id', 'name', 'pin', 'tin', 'date_birth']
+        fields = ['id', 'name', 'pin', 'tin', 'date_birth', 'photo']
 
 class CourseSerializer(serializers.ModelSerializer):
     class Meta:
@@ -35,4 +35,4 @@ class ListStudentsEnrollmentSerializer(serializers.ModelSerializer):
 class StudentSerializerV2(serializers.ModelSerializer):
     class Meta:
         model = Student
-        fields = ['id', 'name', 'cell', 'pin', 'tin', 'date_birth']
+        fields = ['id', 'name', 'cell', 'pin', 'tin', 'date_birth', 'photo']
