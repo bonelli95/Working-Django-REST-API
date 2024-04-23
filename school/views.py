@@ -19,6 +19,7 @@ class CoursesViewSet(viewsets.ModelViewSet):
     """displaying all courses"""
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
+    http_method_names =['get', 'post', 'put', 'path']
     
     def create(self, request):
         """self-documenting protocol"""
