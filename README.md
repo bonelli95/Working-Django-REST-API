@@ -2,4 +2,5 @@
 -Developing an API from scratch, using the Python language,</br>
 -Working with models, serializers and views,</br>
 -Creating a good architecture in Django Rest API projects,</br>
--Integrate Django Admin with the API
+-Integrate Django Admin with the API,</br>
+-Tests
