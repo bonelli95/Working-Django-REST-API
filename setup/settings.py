@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -149,16 +149,16 @@ REST_FRAMEWORK = {
     #],
 }
 
-CACHES = {
-    "default": {
-        "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://redis-17212.c243.eu-west-1-3.ec2.redns.redis-cloud.com:17212",
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient",
-            "PASSWORD": "8WsEzYVRgTzVsLykYOLPuIXDlhoKXISZ",
-        },
-    }
-}
+#CACHES = {
+#    "default": {
+#        "BACKEND": "django_redis.cache.RedisCache",
+#        "LOCATION": "redis://redis-17212.c243.eu-west-1-3.ec2.redns.redis-cloud.com:17212",
+#        "OPTIONS": {
+#            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+#            "PASSWORD": "8WsEzYVRgTzVsLykYOLPuIXDlhoKXISZ",
+#        },
+#    }
+#}
 
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 SESSION_CACHE_ALIAS = "default"
